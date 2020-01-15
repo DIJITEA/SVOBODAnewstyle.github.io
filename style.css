@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "GothamSSm-XLight";
+  src: url("fonts/GothamSSm-XLight.eot");
+  src: url("fonts/GothamSSm-XLight.eot?#iefix") format("embedded-opentype"),
+    url("fonts/GothamSSm-XLight.ttf") format("truetype"),
+    url("fonts/GothamSSm-XLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VCROSDMono";
+  src: url("./fonts/VCROSDMONO1001.eot");
+  src: url("./fonts/VCROSDMONO1001.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/VCROSDMONO1001.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0px;
+}
+.background {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000000;
+  margin: 0px;
+}
+.white {
+  color: white;
+}
+.svformat {
+  position: fixed;
+  top: 47vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "GothamSSm-XLight";
+  font-size: 20vh;
+  z-index: 2;
+}
+
+.stformat {
+  position: fixed;
+  top: 39vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "GothamSSm-XLight";
+  font-size: 3vh;
+  letter-spacing: 3vh;
+  z-index: 2;
+}
+.djpformat {
+  position: fixed;
+  font-family: "VCROSDMono";
+  top: 95vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.backvideo {
+  position: relative;
+  height: 100vh;
+  margin: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
