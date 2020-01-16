@@ -61,7 +61,7 @@ body {
   z-index: 4;
 }
 .backvideo {
-  position: relative;
+  position: fixed;
   height: 100vh;
   margin: 0px;
   left: 50%;
