@@ -1,20 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>SVOBODA</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="background">
+      <ul class ="btnformat lis">
+        <li>
+      <a href="#" class="" onclick="openmenu(vl = 1);">РАБОТЫ</a>
+        </li>
+      <li>
+      <a href="#" class="" onclick="openmenu(vl = 2);">КОНТАКТЫ</a>
+      </li>
+      <li>
+      <a href="#" class="" onclick="openmenu(vl = 3);">О НАС</a>
+      
+      </li>
+      <li>
+      <a href="#" class="" onclick="openmenu(vl = 4);">VKONTAKTE</a>
+      
+      </li>
+      <li>
+      <a href="#" class="" onclick="openmenu(vl = 5);">INSTAGRAM</a>
+      </li>
+
+      </ul>
+
       <h class="white svformat">СВОБОДА</h>
       <h2 class="white stformat">СТУДИЯ ТАТУИРОВКИ</h2>
       <h3 class="white djpformat"> DIJIT PRODACTION </h3>
-     
+    
+    <div id="sidebar1" class="nonactive sidebar">
+      <h class="white svformat">1</h>
+    </div> 
+    <div id="sidebar2" class="nonactive sidebar">
+      <h class="white svformat">2</h>
+    </div> 
+    <div id="sidebar3" class="nonactive sidebar">
+      <h class="white svformat">3</h>
+    </div> 
+    <div id="sidebar4" class="nonactive sidebar">
+      <h class="white svformat">4</h>
+    </div> 
+    <div id="sidebar5" class="nonactive sidebar">
+      <h class="white svformat">5</h>
+    </div> 
+
+
       <video class="backvideo" loop autoplay muted><source src="sourse/Эпизод 01.mp4"></video>
     </div>
+  </div>
+
+    <script>
+      sessionStorage.clear('test');
+      function openmenu(){
+        let b = vl;
+
+        document.getElementById("sidebar" + b).classList.toggle("active");
+        document.getElementById("sidebar" + b).classList.toggle("nonactive");
+
+        let a = sessionStorage.getItem('test');
+     if(a > 0 && a !=b){
+        document.getElementById("sidebar" + a).classList.remove("active")
+        document.getElementById("sidebar" + a).classList.add("nonactive")
+alert(a);
+     
+     }
+     sessionStorage.setItem('test', vl); 
+ 
+      }
+      </script>
+
   </body>
 </html>
