@@ -65,11 +65,9 @@
         document.getElementById("sidebar" + b).classList.toggle("nonactive");
 
         let a = sessionStorage.getItem('test');
-     if(a > 0 && a !=b){
+     if(a > 0 && a != b){
         document.getElementById("sidebar" + a).classList.remove("active")
         document.getElementById("sidebar" + a).classList.add("nonactive")
-alert(a);
-     
      }
      sessionStorage.setItem('test', vl); 
  
