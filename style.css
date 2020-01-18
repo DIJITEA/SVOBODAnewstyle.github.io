@@ -23,6 +23,13 @@ a {
 body {
   margin: 0px;
 }
+.menusidebardormat{
+  position: fixed;
+  font-family: "GothamSSm-XLight";
+  font-size: 3vh;
+  top: 20vh;
+  letter-spacing: 1vh;
+}
 .background {
   position: relative;
   min-height: 100vh;
@@ -91,6 +98,11 @@ ul.lis li a {
   color: white;
 }
 
+ul.lis2 li {
+  display: block;
+ 
+}
+
 
 .active {
   top: 0px;
@@ -114,4 +126,11 @@ ul.lis li a {
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
   transition: all 300ms;
+}
+
+.vkpos{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 12vh;
 }

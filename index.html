@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SVOBODA</title>
 
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?165"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Photo.css" />
   </head>
   <body>
     <div class="background">
@@ -35,30 +37,81 @@
       <h2 class="white stformat">СТУДИЯ ТАТУИРОВКИ</h2>
       <h3 class="white djpformat"> DIJIT PRODACTION </h3>
     
-    <div id="sidebar1" class="nonactive sidebar">
-      <h class="white svformat">1</h>
+    <div id="sidebar1" class="nonactive sidebar">  <!--Работы-->
+      <div id="slide1" class="galpos activeslide">
+       <div class="gallery">
+        <div class="img_wrap" ><img src="Photo/11.jpg" alt=""></div>
+        <div class="img_wrap" ><img src="Photo/22.jpg" alt=""></div>
+        <div class="img_wrap" ><img src="Photo/33.jpg" alt=""></div>
+        <div class="img_wrap" ><img src="Photo/44.jpg" alt=""></div>
+        <div class="img_wrap" ><img src="Photo/55.jpg" alt=""></div>
+        <div class="img_wrap" ><img src="Photo/66.jpg" alt=""></div>
+       </div>
+      </div>
+      <div id="slide2" class="galpos nonactiveslide">
+        <div class="gallery">
+         <div class="img_wrap" ><img src="Photo/77.jpg" alt=""></div>
+         <div class="img_wrap" ><img src="Photo/88.jpg" alt=""></div>
+         <div class="img_wrap" ><img src="Photo/99.jpg" alt=""></div>
+         <div class="img_wrap" ><img src="Photo/44.jpg" alt=""></div>
+         <div class="img_wrap" ><img src="Photo/55.jpg" alt=""></div>
+         <div class="img_wrap" ><img src="Photo/66.jpg" alt=""></div>
+        </div>
+       </div>
+      <img  class="buttonrightpos" onclick="swipe(slide =  slide + 1);" src="Photo/1.svg" alt="">
+      <img  class="buttonleftpos" onclick="swipe(slide =  slide - 1);" src="Photo/2.svg" alt="">
     </div> 
-    <div id="sidebar2" class="nonactive sidebar">
+    <div id="sidebar2" class="nonactive sidebar">  <!--Контакты-->
       <h class="white svformat">2</h>
     </div> 
-    <div id="sidebar3" class="nonactive sidebar">
-      <h class="white svformat">3</h>
+    <div id="sidebar3" class="nonactive sidebar">  <!--О НАС-->
+      <div class="white menusidebardormat">
+     
+      
+      <ul class="lis2">
+        <li><h3>
+          Чем мы отличаемся от десятка других Саратовских студий?
+        </h3></li>
+        <li>Высокое качество работы.</li>
+        <li>Квалифицированные мастера.</li>
+        <li>Полная стерильность.</li>
+        <li>Бесплатная консультация до полного заживления.</li>
+      </ul>
+     
+      <ul class="lis2">
+        <li> <h3>
+          Чем мы занимаемся?
+       </h3></li>
+       <li>Художественная татуировка любой сложности и стилистики.</li>
+       <li>Пирсинг любой сложности.</li>
+       <li>Разработка уникального эскиза.</li>
+       <li>Перекрытие старых татуировок.</li>
+       <li>Коррекция татуировок.</li>
+      </ul>
+      </div>
     </div> 
-    <div id="sidebar4" class="nonactive sidebar">
-      <h class="white svformat">4</h>
+    <div id="sidebar4" class="nonactive sidebar"> <!--VKONTAKTE-->
+  <div class="vkpos">
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: "1324", no_cover: 1, height: "800", color1: '000000', color2: 'FFFFFF', color3: 'FFFFFF'}, 82638537);
+</script>
+     </div>
     </div> 
-    <div id="sidebar5" class="nonactive sidebar">
+    <div id="sidebar5" class="nonactive sidebar">  <!--INSTAGRAM-->
       <h class="white svformat">5</h>
     </div> 
 
 
       <video class="backvideo" loop autoplay muted><source src="sourse/Эпизод 01.mp4"></video>
     </div>
-  </div>
 
+  </div>
+<!--Menu script-->
     <script>
 
-       setTimeout('alert("PC version for horizontal screen orientation")', 100);
+      /* setTimeout('alert("PC version for horizontal screen orientation")', 100);*/
 
 
       sessionStorage.clear('test');
@@ -81,6 +134,52 @@
      sessionStorage.setItem('test', val); 
  
       }
+      </script>
+      <!--Photo slider-->
+      <script>
+       let slide = 1;
+       let prevslide = 0;
+        function swipe(){
+          if (slide < 3 && slide > 1){
+          document.getElementById("slide" + slide ).classList.toggle("activeslide");
+          document.getElementById("slide" + slide ).classList.toggle("nonactiveslide");
+          prevslide = prevslide + 1;
+          document.getElementById("slide" + prevslide ).classList.toggle("activeslide");
+          document.getElementById("slide" + prevslide ).classList.toggle("nonactiveslide");
+          console.log(slide);
+          console.log(prevslide);
+          console.log("norm");
+          return;
+          }
+          else if (slide > 0){
+          slide = 1;
+          document.getElementById("slide" + slide).classList.toggle("activeslide");
+          document.getElementById("slide" + slide).classList.toggle("nonactiveslide");
+          prevslide = 2;
+          console.log(prevslide);
+          document.getElementById("slide" + prevslide ).classList.toggle("activeslide");
+          document.getElementById("slide" + prevslide ).classList.toggle("nonactiveslide");
+          prevslide = 0;
+          console.log(slide);
+          console.log(prevslide);
+          console.log("mid");
+          return;
+          }
+          else {
+            slide = 2;
+          document.getElementById("slide" + slide).classList.toggle("activeslide");
+          document.getElementById("slide" + slide).classList.toggle("nonactiveslide");
+          prevslide = 1;
+          document.getElementById("slide" + prevslide ).classList.toggle("activeslide");
+          document.getElementById("slide" + prevslide ).classList.toggle("nonactiveslide");
+          
+          console.log("last");
+          console.log(slide);
+          console.log(prevslide);
+          return;
+          }
+      }
+    
       </script>
 
   </body>
