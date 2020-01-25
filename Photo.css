@@ -2,11 +2,11 @@
   background: #000000;
 }
 .galpos{
-  position: fixed;
+  position: absolute;
   top: 10vh;
   height: 50%;
-  width: 69%;
-  margin: 0px;
+  width: 63%;
+  margin: 2px;
 }
 
 .gallery {
@@ -29,17 +29,17 @@
 }
 .buttonrightpos{
   position: fixed;
-  top: 43vh;
-  height: 20%;
+  top: 48vh;
+  height: 7%;
   margin: 0px;
-  left: 80%;
+  left: 84%;
 }
 .buttonleftpos{
   position: fixed;
-  top: 43vh;
-  height: 20%;
+  top: 48vh;
+  height: 7%;
   margin: 0px;
-  right: 80%;
+  right: 84%;
 }
 
 .activeslide {
